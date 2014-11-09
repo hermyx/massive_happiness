@@ -1,0 +1,6 @@
+#Latex compilde files
+*.log
+*.out
+*.pdf
+*.gz
+*.toc
