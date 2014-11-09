@@ -1,0 +1,100 @@
+%this file is the analysis report of POO project
+%a % comment anything after % until the end of the line
+%minimum references to begin our article
+\documentclass[12pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage[margin=1in]{geometry}
+\usepackage{indentfirst}
+\usepackage{titlesec}
+\newcommand{\sectionbreak}{\clearpage}
+\pagestyle{fancy}
+%\cfoot{Rapport de présentation projet POO}
+% the last extension makes it possible to add images
+%presentation of the document
+\title{Projet Modéliation et Programmation Orientée Objet\smallbreak Rapport d'analyse du jeu et de conception du logiciel}
+\author{Julien \textsc{Bouvet}, Mikail \textsc{Demirdelen} \\}
+\date{08/11/2014}
+\setlength\parindent{15pt}
+\begin{document}
+\maketitle
+\newpage
+\begin{abstract}
+A-t-on besoin d'un abstract ?
+\end{abstract}
+\newpage
+%to add a table of contents
+\tableofcontents
+\newpage
+\section{Introduction}
+
+Dans le cadre du Projet MOO/MOO/COO, bla bla, on va faire un jeu qui roxxe sa mère (JE SAVAIS PAS COMMENT COMMENCER ><) \newline \newline
+Le principe de ce projet est d'avoir une première aproche de la programmation et modélisation orientée objet à travers un logiciel relativement complexe. Nous devons donc implémenter un jeu de stratégie au tour par tour et pour ce faire nous allons passer par différentes phases de conception.
+\begin{itemize}
+  \item Analyse du jeu : Nous devrons comprendre et assimiler le fonctionnement du jeu afin de concevoir son fonctionnement logiciel. De plus, nous allons devoir en détailler les règles.
+  \item Analyse de la structure du logiciel :  A l'aide de différents diagrammes, nous allons pouvoir définir conceptuellement plusieurs classes, leurs différentes relations et interactions. De plus, nous devrons utiliser des patrons de conception pour rendre plus générique la modélation de notre logiciel.
+  \item Implémentation du jeu : Nous allons développer concrètement le jeu dans le langage C\#, nous permettant d'appliquer les principes de programmation orientée objet.
+\end{itemize}
+\newpage
+
+\section{Présentation du jeu}
+Le jeu est un jeu de stratégie au tour dans lequel chaque joueur contrôle un peuple. Le joueur doit gérer des unités sur une carte afin d'obtenir le plus de points possible après un certain nombre de tours de jeu.
+\subsection{Règles de base}
+ Afin d'avoir le plus de points possible, le commence avec des unités placées sur une même case de la carte. Il a ensuite le choix de les répartir comme bon lui semble.Chaque case contrôlée rapport un point. Il est possible d'utiliser certains bonus pour augmenter la valeur d'une case. A CONTINUER.
+
+\subsection{Les peuples}
+Il existe trois peuples : les Elfs, les Orcs et les Nains. Chaque peuple a ses propres caractéristiques très différentes influant les différentes stratégies de jeu. Un joueur ne peut choisir qu'un seul peuple.
+\subsubsection{Elf}
+Les mecs de la forêt ma gueule
+\subsubsection{Orc}
+Les mecs de la plaine ma gueule
+\subsubsection{Nain}
+Les mecs de la montagne ma gueule
+
+\subsection{La Carte du monde}
+La carte du monde se compose de cases hexagonales. Il existe différents types de cases. A CONTINUER.
+
+\subsubsection{Types de cartes}
+Il existe 3 types de cartes :
+\begin{itemize}
+  \item Démo : 2 joueurs, 5 cases x 5 cases, 4 unités par joueur.
+  \item Petite : 2 joueurs, 10 cases x 10 cases, 6 unités par joueur.
+  \item Normale :  2 joueurs, 15 cases x 15 cases, 8 unités par joueur.
+\end{itemize}
+
+\subsection{Les Combats}
+BLA BLA
+
+\subsection{Début de partie}
+BLA BLA
+
+\subsection{Déroulement d'un tour}
+\newpage
+
+\section{Présentation du logiciel}
+
+\subsection{Cas d'utilisations}
+Pour le diagramme de cas d'utilisations
+\subsection{Architecture générale}
+Pour le diagramme de classes
+\subsection{Cycle de vie d'une unité}
+Pour le diagramme, ô combien inutile :p, d'états-transitions
+\subsection{Déroulement globale d'une partie jusqu'à la victoire d'un joueur}
+Pour les diagrammes de séquence et d'activité
+\subsection{Déroulement d'un tour pour un joueur}
+Pour les diagrammes de séquence et d'activité
+\newpage
+
+\section{Conclusion}
+
+\newpage
+
+\bibliography{bibliography}
+\bibliographystyle{plain}
+\end{document}

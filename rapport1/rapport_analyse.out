@@ -1,0 +1,19 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Pr\351sentation du jeu}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{R\350gles de base}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Les peuples}{section.2}% 4
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Elf}{subsection.2.2}% 5
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Orc}{subsection.2.2}% 6
+\BOOKMARK [3][-]{subsubsection.2.2.3}{Nain}{subsection.2.2}% 7
+\BOOKMARK [2][-]{subsection.2.3}{La Carte du monde}{section.2}% 8
+\BOOKMARK [3][-]{subsubsection.2.3.1}{Types de cartes}{subsection.2.3}% 9
+\BOOKMARK [2][-]{subsection.2.4}{Les Combats}{section.2}% 10
+\BOOKMARK [2][-]{subsection.2.5}{D\351but de partie}{section.2}% 11
+\BOOKMARK [2][-]{subsection.2.6}{D\351roulement d'un tour}{section.2}% 12
+\BOOKMARK [1][-]{section.3}{Pr\351sentation du logiciel}{}% 13
+\BOOKMARK [2][-]{subsection.3.1}{Cas d'utilisations}{section.3}% 14
+\BOOKMARK [2][-]{subsection.3.2}{Architecture g\351n\351rale}{section.3}% 15
+\BOOKMARK [2][-]{subsection.3.3}{Cycle de vie d'une unit\351}{section.3}% 16
+\BOOKMARK [2][-]{subsection.3.4}{D\351roulement globale d'une partie jusqu'\340 la victoire d'un joueur}{section.3}% 17
+\BOOKMARK [2][-]{subsection.3.5}{D\351roulement d'un tour pour un joueur}{section.3}% 18
+\BOOKMARK [1][-]{section.4}{Conclusion}{}% 19
