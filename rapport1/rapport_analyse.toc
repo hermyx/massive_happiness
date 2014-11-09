@@ -12,9 +12,9 @@
 \contentsline {subsection}{\numberline {2.5}D\IeC {\'e}but de partie}{6}{subsection.2.5}
 \contentsline {subsection}{\numberline {2.6}D\IeC {\'e}roulement d'un tour}{6}{subsection.2.6}
 \contentsline {section}{\numberline {3}Pr\IeC {\'e}sentation du logiciel}{7}{section.3}
-\contentsline {subsection}{\numberline {3.1}Cas d'utilisations}{7}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Architecture g\IeC {\'e}n\IeC {\'e}rale}{7}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}Cycle de vie d'une unit\IeC {\'e}}{7}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}D\IeC {\'e}roulement globale d'une partie jusqu'\IeC {\`a} la victoire d'un joueur}{7}{subsection.3.4}
-\contentsline {subsection}{\numberline {3.5}D\IeC {\'e}roulement d'un tour pour un joueur}{7}{subsection.3.5}
-\contentsline {section}{\numberline {4}Conclusion}{8}{section.4}
+\contentsline {subsection}{\numberline {3.1}Architecture g\IeC {\'e}n\IeC {\'e}rale}{7}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Cas d'utilisations}{8}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}D\IeC {\'e}roulement globale d'une partie jusqu'\IeC {\`a} la victoire d'un joueur}{9}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}D\IeC {\'e}roulement d'un tour pour un joueur}{9}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}Cycle de vie d'une unit\IeC {\'e}}{9}{subsection.3.5}
+\contentsline {section}{\numberline {4}Conclusion}{10}{section.4}
