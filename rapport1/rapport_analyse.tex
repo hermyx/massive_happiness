@@ -46,21 +46,14 @@ Le principe de ce projet est d'avoir une première aproche de la programmation e
 \newpage
 
 \section{Présentation du jeu}
-Le jeu est un jeu de stratégie au tour dans lequel chaque joueur contrôle un peuple. Le joueur doit gérer des unités sur une carte afin d'obtenir le plus de points possible après un certain nombre de tours de jeu.
+Le but du projet est de développer est un jeu de stratégie au tour dans lequel chaque joueur contrôle un peuple. Le joueur doit gérer des unités sur une carte afin d'obtenir le plus de points possible après un certain nombre de tours de jeu.
 \subsection{Règles de base}
- Afin d'avoir le plus de points possible, le commence avec des unités placées sur une même case de la carte. Il a ensuite le choix de les répartir comme bon lui semble.Chaque case contrôlée rapport un point. Il est possible d'utiliser certains bonus pour augmenter la valeur d'une case. A CONTINUER.
-
 \subsection{Les peuples}
 Il existe trois peuples : les Elfs, les Orcs et les Nains. Chaque peuple a ses propres caractéristiques très différentes influant les différentes stratégies de jeu. Un joueur ne peut choisir qu'un seul peuple.
-\subsubsection{Elf}
-Les mecs de la forêt ma gueule
-\subsubsection{Orc}
-Les mecs de la plaine ma gueule
-\subsubsection{Nain}
-Les mecs de la montagne ma gueule
+Chaque peuple a des bonus ou des malus en fonction des conditions environnemental ou des actions effectuées par l'unité. Par exemple, le coût d'un déplament en forêt, pour un elf, est divisé par deux. Autre exemple, un orc qui tue une unité au combat gagne un point bonus permanent.
 
 \subsection{La Carte du monde}
-La carte du monde se compose de cases hexagonales. Il existe différents types de cases. A CONTINUER.
+La carte du monde se compose de cases hexagonales. Il existe différents types de cases : Désert, Montagne, Forêt et Plaine. Ces différents terrains interagissent différent avec les unités, en fonction du peuple auquel elles appartiennent. Ils permettent ainsi de développer de nombreuses stratégies.
 
 \subsubsection{Types de cartes}
 Il existe 3 types de cartes :
@@ -77,6 +70,7 @@ BLA BLA
 BLA BLA
 
 \subsection{Déroulement d'un tour}
+BLA BLA
 \newpage
 
 \section{Présentation du logiciel}
@@ -132,7 +126,21 @@ Ensuite, afin d'avoir une vision du tour et des actions du joueur mais en terme 
 \end{figure}
 
 \subsection{Déroulement globale d'une partie jusqu'à la victoire d'un joueur}
+Après avoir développé un seul tour, nous nous sommes demandés l'interaction entre les tours des joueurs jusqu'à la victoire de l'un d'entre eux. Comme pour le cas d'un seul tour, nous trouvons que les diagrammes de séquences de sont pas adaptés à avoir une vue d'ensemble facilement compréhensible d'un système, c'est pourquoi nous avons fait un autre diagramme d'activité. Il permet de mieux comprendre le fonctionnement d'un tour. Il est représenté en figure \ref{activiteJeu}.
 
+\begin{figure}[!h] 
+\centerline{\includegraphics[scale=0.60]{activite_jeu_ex.gif}}
+   \caption{\label{étiquette} Diagramme d'activité représentant le déroulement d'un tour pour un joueur}
+\label{activiteJeu}
+\end{figure}
+
+Nous avons complété ce diagramme d'activité par un diagramme de séquence, réprésenté en figure \ref{sequenceJeu}, explicitant JE SAIS PU QUEL DIAG ON AVAIT FAIT.
+
+\begin{figure}[!h] 
+\centerline{\includegraphics[scale=0.60]{sequence_jeu_ex.png}}
+   \caption{\label{étiquette} Diagramme de séquence représentant le déroulement d'un tour pour un joueur}
+\label{sequenceJeu}
+\end{figure}
 
 \subsection{Cycle de vie d'une unité}
 Enfin, nous avons voulu nous intéresser au Jeu et plus au Joueur. Ainsi, nous avons décidé de nous pencher sur le cycle de vie d'une des unités, permettant ainsi d'avoir une vision globale de la durée d'une unité sur le plateau. Nous avons représenté celà sur un diagramme d'état-transitions représenté à la figure \ref{etata}
