@@ -1,0 +1,31 @@
+
+\section{Présentation du jeu}
+Le but du projet est de développer est un jeu de stratégie au tour dans lequel chaque joueur contrôle un peuple. Le joueur doit gérer des unités sur une carte afin d'obtenir le plus de points possible après un certain nombre de tours de jeu.
+\subsection{Règles de base}
+\subsection{Les peuples}
+Il existe trois peuples : les Elfs, les Orcs et les Nains. Chaque peuple a ses propres caractéristiques très différentes influant les différentes stratégies de jeu. Un peuple ne peut être choisi que par un seul joueur.
+Chaque peuple a des bonus ou des malus en fonction des conditions environnemental ou des actions effectuées par l'unité. Par exemple, le coût d'un déplament en forêt, pour un elf, est divisé par deux. Autre exemple, un orc qui tue une unité au combat gagne un point bonus permanent.
+
+\subsection{La Carte du monde}
+La carte du monde se compose de cases hexagonales. Il existe différents types de cases : Désert, Montagne, Forêt et Plaine. Ces différents terrains interagissent différent avec les unités, en fonction du peuple auquel elles appartiennent. Ils permettent ainsi de développer de nombreuses stratégies.
+
+\subsubsection{Types de cartes}
+Il existe 3 types de cartes :
+\begin{itemize}
+  \item Démo : 2 joueurs, 6 cases x 6 cases, 4 unités par joueur.
+  \item Petite : 2 joueurs, 10 cases x 10 cases, 6 unités par joueur.
+  \item Normale :  2 joueurs, 14 cases x 14 cases, 8 unités par joueur.
+\end{itemize}
+
+\subsection{Les Combats}
+Pour qu'une unité attaque une autre unité, ils faut qu'elles se trouvent sur des cases adjacentes. Lorsqu'une unité attaque une case contenant plusieurs unités, la meilleure unité défensive est choisie. Chaque combat calcul les probabilités de perte d'une vie de l'attaquant : en effet, si l'attaquant à 3 points d'attaque, contre un défenseur qui a 4 points de défense, alors on récupère la moitié de la différence qu'on augmente de 50\%. Dans ce cas, 1-(3/4) = 25\%, 25\%/2=12.5\%, 50\%+12.5\%=62.5\%. L'attaquant aura 62.5\% de chances de perdre une vie.\newline
+De plus, les points de vie rentrent en compte dans le calcul des probabilités : on pondère le nombre de points d'attaque par le pourcentage de vie restant. Une unité avec 4 points d'attaque de base et 50\% de sa vie se retrouvera avec 2 points d'attaque.\newline
+Enfin, lorsqu'un attaquant gagne le combat, il se déplace automatiquement sur la case du défenseur si elle est vide. Cela lui coûte un point de déplacement quel que soit le type de la case ou de l'unité.
+
+\subsection{Le jeu}
+\subsubsection{Début du jeu}
+Chaque joueur commence la partie en sélectionnant son peuple. Le choix du premier joueur est fait aléatoirement. Pour commencer, les unités du peuples sont placées sur la même case. Les joueurs jouent tour à tour sur le même ordinateur.
+\subsubsection{Déroulement d'un tour}
+Lorsqu'un joueur peut jouer, il peut choisir de déplacer ses unités ou d'attaquer une unité adverse s'il est à portée. Dans tous les cas, il devra lui rester assez de point de déplacement.
+
+Lorsqu'un joueur a fini son tour, il clique sur le bouton Fin de tour, ce qui permet à l'autre de commencer son tour.

@@ -1,0 +1,78 @@
+\section{Présentation du logiciel}
+
+\subsection{Architecture générale}
+Notre première analyse porta sur l'architecture générale du logiciel. Nous avons ainsi conçu un diagramme de classe correspondant à notre vision du jeu, représenté à la figure \ref{classe}
+
+\begin{figure}[!h] 
+\centerline{\includegraphics[scale=0.60]{img/diag_class_ex.png}}
+   \caption{\label{étiquette} Diagramme de classe du logiciel}
+\label{classe}
+\end{figure}
+
+Sur ce diagramme, nous avons 5 principaux acteurs.
+\begin{itemize}
+  \item Le Jeu, ou Game, qui représente la partie du jeu. Il fait le lien entre le Joueur (Player) et le Plateau (Board). 
+  \item Le Joueur, ou Player, est la classe représentant, comme son nom l'indique, le joueur. C'est lui qui intéragira avec la vue du plateau, et qui donnera des ordres à ses Unités.
+  \item Le Plateau, ou Board, contient les cases sur lequel le jeu évolue. Il contient aussi les différentes unités en jeu. Cela permet un accès plus rapide pour le traitement de certaines actions.
+  \item Les Cases, ou Tiles, sont les cases, au sens individuel du terme, contenues sur le Plateau. Elle possèdent les Unités qui se trouvent sur elle. Elle hérite 4 autres classes, chacune correspondant au type de terrain associé : Plaine, Désert, Forêt, Montagne.
+  \item Les Unités, ou Units, sont les personnages évoluant sur la carte. Les différents peuple sont ici défini comme héritant la classe Unité. Ainsi, on peut surcharger des fonctions, comme le déplacement ou l'attaque, en fonction du peuple de l'Unité : Elf, Orc ou Nain.
+\end{itemize}
+
+\subsection{Cas d'utilisations}
+Après avoir pensé au logiciel en tant que tel, nous avons réfléchi sur l'interaction que le logiciel aurait avec l'utilisateur. Sur la figure \ref{casdut1}, on peut voir le fonctionnement global du logiciel. Sur la figure \ref{casdut2}, on BLA BLA BLA.
+
+\begin{figure}[!h] 
+\centerline{\includegraphics[scale=0.60]{img/diag_cas_dut_ex.jpeg}}
+   \caption{\label{étiquette} Diagramme de cas d'utilisations global}
+\label{casdut1}
+\end{figure}
+
+\begin{figure}[!h] 
+\centerline{\includegraphics[scale=0.60]{img/diag_cas_dut2_ex.jpeg}}
+   \caption{\label{étiquette} Diagramme de cas d'utilisations spécifique}
+\label{casdut2}
+\end{figure}
+
+\subsection{Déroulement d'un tour pour un joueur}
+Le joueur pouvant exécuter de nombreuses actions lors de son tour, nous avons voulu détailler le déroulement d'un tour lambda pour un joueur. Ainsi, nous avons tout d'abord fait un diagramme d'activité permettant une bonne visualisation d'ensemble du tour. On peut voir toutes les actions réalisables, combien de fois le joueur peut les éxecuter, et quelles sont les conditions pour terminer son tour. Le diagramme est représenté sur la figure \ref{activiteTour}
+
+\begin{figure}[!h] 
+\centerline{\includegraphics[scale=0.60]{img/activite_tour_ex.png}}
+   \caption{\label{étiquette} Diagramme d'activité représentant le déroulement d'un tour pour un joueur}
+\label{activiteTour}
+\end{figure}
+
+Ensuite, afin d'avoir une vision du tour et des actions du joueur mais en terme de méthodes, de classes et d'interactions, nous avons fait un diagramme de séquence. Il représente le tour d'un joueur ou celui-ci décide de déplacer une de ses unités, puis de terminer son tour. Ce diagramme est représenté sur la figure \ref{sequenceTour}
+
+\begin{figure}[!h] 
+\centerline{\includegraphics[scale=0.60]{img/sequence_tour_ex.png}}
+   \caption{\label{étiquette} Diagramme de séquence représentant le déroulement d'un tour pour un joueur}
+\label{sequenceTour}
+\end{figure}
+
+\subsection{Déroulement globale d'une partie jusqu'à la victoire d'un joueur}
+Après avoir développé un seul tour, nous nous sommes demandés l'interaction entre les tours des joueurs jusqu'à la victoire de l'un d'entre eux. Comme pour le cas d'un seul tour, nous trouvons que les diagrammes de séquences de sont pas adaptés à avoir une vue d'ensemble facilement compréhensible d'un système, c'est pourquoi nous avons fait un autre diagramme d'activité. Il permet de mieux comprendre le fonctionnement d'un tour. Il est représenté en figure \ref{activiteJeu}.
+
+\begin{figure}[!h] 
+\centerline{\includegraphics[scale=0.60]{img/activite_jeu_ex.png}}
+   \caption{\label{étiquette} Diagramme d'activité représentant le déroulement d'un tour pour un joueur}
+\label{activiteJeu}
+\end{figure}
+
+Nous avons complété ce diagramme d'activité par un diagramme de séquence, réprésenté en figure \ref{sequenceJeu}, explicitant JE SAIS PU QUEL DIAG ON AVAIT FAIT.
+
+\begin{figure}[!h] 
+\centerline{\includegraphics[scale=0.60]{img/sequence_jeu_ex.png}}
+   \caption{\label{étiquette} Diagramme de séquence représentant le déroulement d'un tour pour un joueur}
+\label{sequenceJeu}
+\end{figure}
+
+\subsection{Cycle de vie d'une unité}
+Enfin, nous avons voulu nous intéresser au Jeu et plus au Joueur. Ainsi, nous avons décidé de nous pencher sur le cycle de vie d'une des unités, permettant ainsi d'avoir une vision globale de la durée d'une unité sur le plateau. Nous avons représenté celà sur un diagramme d'état-transitions représenté à la figure \ref{etata}
+
+\begin{figure}[!h] 
+\centerline{\includegraphics[scale=0.60]{img/etata_ex.png}}
+   \caption{\label{étiquette} Diagramme d'état-transition représentant le cycle de vie d'une unité}
+\label{etata}
+\end{figure}
+\newpage
