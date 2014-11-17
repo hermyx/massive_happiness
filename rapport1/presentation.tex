@@ -1,12 +1,10 @@
-
 \section{Présentation du jeu}
-Le but du projet est de développer est un jeu de stratégie au tour dans lequel chaque joueur contrôle un peuple. Le joueur doit gérer des unités sur une carte afin d'obtenir le plus de points possible après un certain nombre de tours de jeu. Détaillons les différentes spécificités du jeu.
+Le but du projet est de développer est un jeu de stratégie au tour par tour. Chaque joueur contrôle un peuple et doit gérer des unités sur une carte afin d'obtenir le plus de points possible après un certain nombre de tours de jeu. Détaillons-en les différentes spécificités.
 \subsection{Les peuples}
-Il existe trois peuples : les Elfs, les Orcs et les Nains. Chaque peuple a ses propres caractéristiques très différentes influant les différentes stratégies de jeu. Un peuple ne peut être choisi que par un seul joueur.
-Chaque peuple a des bonus ou des malus en fonction des conditions environnemental ou des actions effectuées par l'unité. Par exemple, le coût d'un déplament en forêt, pour un elf, est divisé par deux. Autre exemple, un orc qui tue une unité au combat gagne un point bonus permanent.
+Il existe trois peuples : les Elfs, les Orcs et les Nains, dont les caractéristiques influent sur les différentes stratégies de jeu. Un peuple ne peut être choisi que par un seul joueur et a des bonus/malus en fonction des conditions environnementales ou des actions effectuées par les unités. Par exemple, le coût d'un déplacement en forêt, pour un elf, est divisé par deux. Autre exemple, un orc qui tue une unité au combat gagne un point bonus permanent.
 
 \subsection{La Carte du monde}
-La carte du monde se compose de cases hexagonales. Il existe différents types de cases : Désert, Montagne, Forêt et Plaine. Ces différents terrains interagissent différemment avec les unités, en fonction du peuple auquel elles appartiennent. Ils permettent ainsi de développer de nombreuses stratégies.
+La carte du monde se compose de cases hexagonales dont il existe différents types : Désert, Montagne, Forêt et Plaine. Ces différents terrains interagissent avec les unités en fonction du peuple auquel elles appartiennent, permettant ainsi de développer plusieurs stratégies.
 
 \subsection{Types de cartes}
 Il existe 3 types de cartes :
@@ -15,9 +13,9 @@ Il existe 3 types de cartes :
   \item Petite : 2 joueurs, 10 cases x 10 cases, 6 unités par joueur.
   \item Normale :  2 joueurs, 14 cases x 14 cases, 8 unités par joueur.
 \end{itemize}
-
+Le nombre de case est multiple de 4, puisque le terrain comporte autant de cases de chaque type disponible.
 \subsection{Les Combats}
-Pour qu'une unité attaque une autre unité, ils faut qu'elles se trouvent sur des cases adjacentes. Lorsqu'une unité attaque une case contenant plusieurs unités, la meilleure unité défensive est choisie. Chaque combat calcul les probabilités de perte d'une vie de l'attaquant : en effet, si l'attaquant à 3 points d'attaque, contre un défenseur qui a 4 points de défense, alors on récupère la moitié de la différence qu'on augmente de 50\%. Dans ce cas, 1-(3/4) = 25\%, 25\%/2=12.5\%, 50\%+12.5\%=62.5\%. L'attaquant aura 62.5\% de chances de perdre une vie.\newline \\
+Pour qu'une unité attaque une autre unité, ils faut qu'elles se trouvent sur des cases adjacentes. Lorsqu'une unité attaque une case contenant plusieurs unités, la meilleure unité défensive est choisie. Chaque combat calcule les probabilités de perte d'une vie de l'attaquant : en effet, si l'attaquant a 3 points d'attaque, contre un défenseur qui a 4 points de défense, alors on récupère la moitié de la différence qu'on augmente de 50\%. Dans ce cas, 1-(3/4) = 25\%, 25\%/2=12.5\%, 50\%+12.5\%=62.5\%. L'attaquant aura 62.5\% de chances de perdre une vie.\newline \\
 De plus, les points de vie rentrent en compte dans le calcul des probabilités : on pondère le nombre de points d'attaque par le pourcentage de vie restant. Une unité avec 4 points d'attaque de base et 50\% de sa vie se retrouvera avec 2 points d'attaque.\newline \\
 Enfin, lorsqu'un attaquant gagne le combat, il se déplace automatiquement sur la case du défenseur si elle est vide. Cela lui coûte un point de déplacement quel que soit le type de la case ou de l'unité.
 

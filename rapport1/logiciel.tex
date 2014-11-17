@@ -1,6 +1,6 @@
 \section{Présentation du logiciel}
 
-\subsection{Fonctionnement du jeu et contraintes}
+\subsection{Fonctionnement et contraintes}
 Pour décider de l'implémentation de notre logiciel, il convient bien sûr d'en cerner les mécanismes, et les interactions avec l'utilisateur. Nous les avons donc formalisé au moyen de différents diagrammes.
 
 \subsubsection{Cas d'utilisations}
@@ -20,19 +20,11 @@ Sur ce diagramme de cas d'utilisation, on présente les interactions possibles e
 	\label{casdut2}
 \end{figure}
 
-\subsubsection{Déroulement d'une partie}
-Nous avons illustré le fonctionnement d'une partie grâce à un diagramme d'activité. Il ets basé sur le fait qu'il n'y ait que deux joueurs (élément du cahier des charges), même si l'étendre ne changerait que peu de choses.
-\begin{figure}[!h] 
-\centerline{\includegraphics[width=\textwidth]{img/activite_jeu_ex.png}}
-   \caption{\label{étiquette} Diagramme d'activité représentant le déroulement d'une partie pour deux joueurs}
-\label{activiteTour}
-\end{figure}
-
 \subsubsection{Déroulement d'un tour}
-Le joueur pouvant exécuter de nombreuses actions lors de son tour, nous avons voulu détailler le déroulement d'un tour lambda pour un joueur. Ainsi, nous avons tout d'abord fait un diagramme d'activité permettant une bonne visualisation d'ensemble du tour. On peut voir toutes les actions réalisables, combien de fois le joueur peut les éxecuter, et quelles sont les conditions pour terminer son tour. Le diagramme est représenté sur la figure \ref{activiteTour}
+Le joueur pouvant exécuter de nombreuses actions lors de son tour, nous avons voulu détailler le déroulement d'un tour lambda pour un joueur. Ainsi, nous avons tout d'abord fait un diagramme d'activité permettant une bonne visualisation d'ensemble du tour. On peut voir toutes les actions réalisables, combien de fois le joueur peut les exécuter, et quelles sont les conditions pour terminer son tour. Le diagramme est représenté sur la figure \ref{activiteTour}
 
 \begin{figure}[!h] 
-\centerline{\includegraphics[width=\textwidth]{img/activite_tour_ex.png}}
+\centerline{\includegraphics[scale=0.58]{img/activite_tour_ex.png}}
    \caption{\label{étiquette} Diagramme d'activité représentant le déroulement d'un tour pour un joueur}
 \label{activiteTour}
 \end{figure}
@@ -46,18 +38,19 @@ Ensuite, afin d'avoir une vision du tour et des actions du joueur mais en terme 
 \end{figure}
 
 \subsection{Déroulement d'une partie}
-Après avoir développé un seul tour, nous nous sommes demandés l'interaction entre les tours des joueurs jusqu'à la victoire de l'un d'entre eux. Comme pour le cas d'un seul tour, nous trouvons que les diagrammes de séquences de sont pas adaptés à avoir une vue d'ensemble facilement compréhensible d'un système, c'est pourquoi nous avons fait un autre diagramme d'activité. Il permet de mieux comprendre le fonctionnement d'un tour. Il est représenté en figure \ref{activiteJeu}.\\
+Après avoir développé un seul tour, nous nous sommes demandés l'interaction entre les tours des joueurs jusqu'à la victoire de l'un d'entre eux. Comme pour le cas d'un seul tour, nous trouvons que les diagrammes de séquences ne sont pas adaptés à avoir une vue d'ensemble facilement compréhensible d'un système, c'est pourquoi nous avons fait un autre diagramme d'activité. Il permet de mieux comprendre le fonctionnement d'un tour. Il est représenté en figure \ref{activiteJeu}.\\
 
 \begin{figure}[!h] 
-\centerline{\includegraphics[width=\textwidth]{img/activite_jeu_ex.png}}
+\centerline{\includegraphics[scale=0.75]{img/activite_jeu_ex.png}}
    \caption{\label{étiquette} Diagramme d'activité représentant le déroulement d'un tour pour un joueur}
 \label{activiteJeu}
 \end{figure}
 
-Nous avons complété ce diagramme d'activité par un diagramme de séquence, réprésenté en figure \ref{sequenceJeu}, explicitant une partie standard avec des "blocs" comme play(), qui se réfèrent au diagramme de séquence précédent.  
+\newpage
+Nous avons complété ce diagramme d'activité par un diagramme de séquence, représenté en figure \ref{sequenceJeu}, explicitant une partie standard avec des "blocs" comme play(), qui se réfèrent au diagramme de séquence précédent.  
 
 \begin{figure}[!h] 
-\centerline{\includegraphics[width=\textwidth]{img/sequence_jeu_ex.png}}
+\centerline{\includegraphics[scale=0.6]{img/sequence_jeu_ex.png}}
    \caption{\label{étiquette} Diagramme de séquence représentant le déroulement d'un tour pour un joueur}
 \label{sequenceJeu}
 \end{figure}
