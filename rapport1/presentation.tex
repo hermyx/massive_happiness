@@ -15,8 +15,28 @@ Il existe 3 types de cartes :
 \end{itemize}
 Le nombre de case est multiple de 4, puisque le terrain comporte autant de cases de chaque type disponible.
 \subsection{Les Combats}
-Pour qu'une unité attaque une autre unité, ils faut qu'elles se trouvent sur des cases adjacentes. Lorsqu'une unité attaque une case contenant plusieurs unités, la meilleure unité défensive est choisie. Chaque combat calcule les probabilités de perte d'une vie de l'attaquant : en effet, si l'attaquant a 3 points d'attaque, contre un défenseur qui a 4 points de défense, alors on récupère la moitié de la différence qu'on augmente de 50\%. Dans ce cas, 1-(3/4) = 25\%, 25\%/2=12.5\%, 50\%+12.5\%=62.5\%. L'attaquant aura 62.5\% de chances de perdre une vie.\newline \\
-De plus, les points de vie rentrent en compte dans le calcul des probabilités : on pondère le nombre de points d'attaque par le pourcentage de vie restant. Une unité avec 4 points d'attaque de base et 50\% de sa vie se retrouvera avec 2 points d'attaque.\newline \\
+Pour qu'une unité attaque une autre unité, ils faut qu'elles se trouvent sur des cases adjacentes. Lorsqu'une unité attaque une case contenant plusieurs unités, la meilleure unité défensive est choisie. Chaque combat calcule les probabilités de perte d'une vie de l'attaquant selon la formule suivante :
+\bigskip
+\begin{minipage}[b]{1\linewidth}
+\centering
+\begin{equation*}
+P = \frac{1 - (A - D)}{2} + 0,5
+\end{equation*}
+\medskip
+\textit{Calcul de la probabilité pour l'attaquant de perdre une vie}
+\end{minipage}%
+
+\bigskip
+\begin{itemize}
+  \item \ensuremath{P}: probabilité de perte d'une vie de l'attaquant
+  \item \ensuremath{A}: points d'attaque de l'unité offensive
+  \item \ensuremath{D}: points de défense de l'unité attaquée.
+\end{itemize}
+\bigskip
+
+Par exemple, prenons une unité ayant 3 points d'attaque déclenche un combat contre une autre unité ayant 4 points de défense, selon cette formule, il aura 62.5\% de chances de perdre une vie.\\
+
+De plus, les points de vie rentrent en compte dans le calcul des probabilités : on pondère le nombre de points d'attaque par le pourcentage de points de vie restants. Une unité avec 4 points d'attaque de base et 50\% de sa vie se retrouvera, au final, avec 2 points d'attaque.\\\\
 Enfin, lorsqu'un attaquant gagne le combat, il se déplace automatiquement sur la case du défenseur si elle est vide. Cela lui coûte un point de déplacement quel que soit le type de la case ou de l'unité.
 
 \subsection{Le jeu}
