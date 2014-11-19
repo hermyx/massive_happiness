@@ -18,7 +18,7 @@ namespace ClassLibrary1
             }
         }
 
-        public void buildGame()
+        public Game buildGame(int option)
         {
             throw new System.NotImplementedException();
         }

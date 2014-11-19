@@ -41,5 +41,16 @@ namespace ClassLibrary1
             {
             }
         }
+
+        public void addPlayer(String name, int points)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool hasWinner()
+        { // Two possibilities : One player is the only one who have units 
+            //or the number of turn is exhausted: highest score wins
+            throw new NotImplementedException();
+        }
     }
 }
