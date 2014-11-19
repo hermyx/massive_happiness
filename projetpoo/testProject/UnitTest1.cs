@@ -12,6 +12,7 @@ namespace testProject
         public void TestMethod1()
         {
             Assert.IsTrue(_g.hasWinner());
+
         }
 
         [TestInitialize]
