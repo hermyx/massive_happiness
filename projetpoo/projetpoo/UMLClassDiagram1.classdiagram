@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="30dbff6d-9bae-4719-9c52-3143a39d0cda" name="UMLClassDiagram1" linkedPackageId="5479e33f-6c29-47e1-a4cf-626d0c9b2f1d" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="73c3ce7d-cdcf-412d-a1a2-b0899fa9288a" name="Unit" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="27996b53-b51c-4ba1-b8a4-7ba2d086db9a" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="1917c34d-2f56-4442-bb09-e64e2440dad2" name="Elf" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="998a3b9d-460e-4649-b581-776153103878" />
+        <generalsInternal>
+          <generalization Id="29e10012-7656-4088-8b92-a1011fe95cf8" isSubstitutable="false">
+            <classMoniker Id="73c3ce7d-cdcf-412d-a1a2-b0899fa9288a" LastKnownName="Unit" />
+            <elementDefinition Id="2e8029d8-9f9c-4656-9591-ed4441de476e" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="723341d0-5103-4ba5-b8ed-ceda40473202" name="Dwarf" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="93ca2bda-0515-4f55-948d-93ae53dcdd1e" />
+        <generalsInternal>
+          <generalization Id="21a5b528-5944-4dcd-921f-ce5e295d257e" isSubstitutable="false">
+            <classMoniker Id="73c3ce7d-cdcf-412d-a1a2-b0899fa9288a" LastKnownName="Unit" />
+            <elementDefinition Id="3b937878-ca03-4faf-8e80-a08d1ae36b83" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="f0349efa-c62f-4f17-b15f-eb7d5530ed6a" name="Orc" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="4086ed0c-6590-40e1-a1c3-9ec05af3ae2f" />
+        <generalsInternal>
+          <generalization Id="1a2b0720-cb16-4ca0-99d1-ea40355ee135" isSubstitutable="false">
+            <classMoniker Id="73c3ce7d-cdcf-412d-a1a2-b0899fa9288a" LastKnownName="Unit" />
+            <elementDefinition Id="a4d57842-cf5f-4052-932c-7292e93ea57c" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="717260d1-08d5-49c8-a437-ec1029ef4ab1" name="UnitFactory" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="869dca27-fbfe-4c5b-8594-898ea5dc9626" />
+        <suppliersInternal>
+          <dependency Id="3aaede17-0f3d-481e-a127-bb1d8784cec3">
+            <classMoniker Id="73c3ce7d-cdcf-412d-a1a2-b0899fa9288a" LastKnownName="Unit" />
+            <elementDefinition Id="7c1a26df-9c2b-4f74-ba41-41a4ae04d6dd" />
+          </dependency>
+        </suppliersInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="7d318b63-a00e-4a5d-882d-a12974b3ed1f" name="Tile" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="4129b4ec-351b-4d74-9957-b95062985588" />
+        <targetEnds>
+          <association Id="a0dcf8c1-3274-4124-9857-d15e56095750" isDerived="false" sourceEndRoleName="Tile" targetEndRoleName="Unit" isLeaf="false" isAbstract="false">
+            <classMoniker Id="73c3ce7d-cdcf-412d-a1a2-b0899fa9288a" LastKnownName="Unit" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4d545164-e7df-4da4-b4aa-6e9f77ffcf93" name="Tile" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c66bad59-2e08-4782-b3b2-4d5b513e2182" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="32596561-6665-4d7a-927b-637809cad699" name="Unit" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="1626f075-68c7-4a35-9570-86a155135572" name="Lower" value="0">
+                      <elementDefinition Id="afa8615a-86b9-46f2-a090-5381dfe83381" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="1b77d04b-e9b9-4cf6-9e23-ffd7c1c4db9c" name="Upper" value="n">
+                      <elementDefinition Id="c97e6c1b-bd81-4d33-8d3a-ba82e191d430" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="8399337b-97a7-48e2-8420-bed693d55380" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="2ee62899-6b9e-4055-be16-c11bd625f3ee" />
+          </association>
+          <association Id="5b8ee55c-c103-4bd1-999a-a541abc2d442" isDerived="false" sourceEndRoleName="Tile" targetEndRoleName="Board" isLeaf="false" isAbstract="false">
+            <classMoniker Id="410aa948-ae5a-421f-87b6-3683d567f3db" LastKnownName="Board" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e96ce3e3-c0b2-4649-8c03-39decec604a2" name="Tile" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2882420e-608e-4d3b-a205-492c0f6cd1ef" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c25ab8c2-8db9-47cc-923b-c51c937b2159" name="Board" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="575d5cf6-a247-4a66-a72d-67604dc217ee" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="cd913b04-cd80-4cd9-8008-ab2815670c18" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="2dcd28d4-655d-4d82-991f-eb7f4e78820a" name="TileFactory" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="4231f2d2-e1b5-4c98-87f6-372051f7ce48" />
+        <targetEnds>
+          <association Id="d6c4330f-5f2c-4349-b82f-562813fa2ec0" isDerived="false" sourceEndRoleName="TileFactory" targetEndRoleName="Tile" isLeaf="false" isAbstract="false">
+            <classMoniker Id="7d318b63-a00e-4a5d-882d-a12974b3ed1f" LastKnownName="Tile" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d830b2d2-44c7-4304-8636-27f8d7a1602c" name="TileFactory" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="1726a5a8-fbe4-40fe-9c97-aa1f01c4c58b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a815787e-cdb5-4c50-8788-82c5af633837" name="Tile" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <lowerValueInternal>
+                    <literalString Id="feb9aabe-b07f-4b2a-9bba-d19f23ef70ac" name="Lower" value="*">
+                      <elementDefinition Id="fe83cc46-1534-42c6-a386-46abe50e8e4d" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="b7820a62-ba52-4fef-931e-602a493f5213" name="Upper" value="*">
+                      <elementDefinition Id="ca394667-147a-428c-92e8-3602e3e96a93" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="d35d3a14-8986-4d8a-8843-38d9018698d4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="af8d6624-bcee-4c8b-bc91-e771fe3514bc" />
+          </association>
+          <association Id="645dc731-ac85-4316-9338-0cd5ef488d49" isDerived="false" sourceEndRoleName="TileFactory" targetEndRoleName="Board" isLeaf="false" isAbstract="false">
+            <classMoniker Id="410aa948-ae5a-421f-87b6-3683d567f3db" LastKnownName="Board" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ce973840-e6f1-4243-a15e-3fcaacdf0733" name="TileFactory" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7eb9f397-b032-4695-b632-932c1e9b13da" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8915c8d1-8d68-4954-b4c4-3be41ae037c3" name="Board" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6902e3a8-9eda-474f-8153-64a0db70d85b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="bbdc76bb-6d63-434b-9d2d-f646ca70f887" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="410aa948-ae5a-421f-87b6-3683d567f3db" name="Board" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="fa1c508c-71b8-4a67-86c0-ef8f3099ae0d" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="37bed275-57c3-4bc1-96eb-b95bbc8cdad0" name="IBoard" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8f7af57a-62fb-4ca9-bc83-7c7fe0ea0413" />
+        <targetEnds>
+          <association Id="8e317f30-126a-4b34-9e67-37942466afd9" isDerived="false" sourceEndRoleName="IBoard" targetEndRoleName="ITile" isLeaf="false" isAbstract="false">
+            <interfaceMoniker Id="da8572b4-f61e-4dcf-aac0-b4870a1d21df" LastKnownName="ITile" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="47cd845b-90d2-4cc2-991a-0b47a37d2d63" name="IBoard" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2b4e2105-6de5-45a1-bf66-7dd49d73fb64" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0fbb7a8f-3312-4138-b07f-e52a60fc9aaa" name="ITile" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="60073ec7-8d64-4c4e-b7b5-0fea083ab316" name="Lower" value="1">
+                      <elementDefinition Id="7ebe8e4a-60c1-4d16-969c-42ef72ea7d9e" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="31316887-edab-42ea-b120-aed6e0255f75" name="Upper" value="n">
+                      <elementDefinition Id="9ea3e90c-ec57-4afe-8d09-fb10bfe1cccb" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="f540a1c2-de27-40e9-ba2c-83391c55d4b1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="b7bd3b2c-e676-401c-842b-92cd7b5367ea" />
+          </association>
+        </targetEnds>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="7bdded12-52ac-4276-844a-490ef1c7e5b3" name="Demo" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="6217b4cb-b843-4396-be8b-aceb2375bdb6" />
+        <generalsInternal>
+          <generalization Id="737c5a25-1ee5-4e2d-8400-91f5b0cb8ab9" isSubstitutable="false">
+            <classMoniker Id="410aa948-ae5a-421f-87b6-3683d567f3db" LastKnownName="Board" />
+            <elementDefinition Id="441ae498-88cf-4df8-8a67-d5f7be3fab5f" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="7d7c1c6c-e804-475f-b089-8f04b0401fa7" name="Small" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="a37ede74-abf6-4118-bded-b11c36f6b678" />
+        <generalsInternal>
+          <generalization Id="8f96e1aa-ac1d-48a8-aadb-d3c7de83376f" isSubstitutable="false">
+            <classMoniker Id="410aa948-ae5a-421f-87b6-3683d567f3db" LastKnownName="Board" />
+            <elementDefinition Id="26d4252e-e1de-440f-ad11-03b23162308a" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="7486e5a7-a071-4e19-8fee-1569de863e73" name="Normal" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="172ae94d-2d20-44f3-8d33-65c24edcfc75" />
+        <generalsInternal>
+          <generalization Id="99b0d6df-f995-40aa-9d3a-375aaf1a0f6d" isSubstitutable="false">
+            <classMoniker Id="410aa948-ae5a-421f-87b6-3683d567f3db" LastKnownName="Board" />
+            <elementDefinition Id="48f84a4b-f0c4-4691-9f36-bae0a44455c2" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="a6953acd-2849-4d66-829b-96bff7860343" name="IUnit" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="90ae07cd-a803-4d1c-b1f7-923725e8f789" />
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="7d61ce88-b7d3-41fd-80bf-64326aef4f7c" name="Mountain" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="262d05eb-c5f6-480c-823b-f43adf88a083" />
+        <generalsInternal>
+          <generalization Id="505f2b59-d417-4e58-9730-6d7a2085962e" isSubstitutable="false">
+            <classMoniker Id="7d318b63-a00e-4a5d-882d-a12974b3ed1f" LastKnownName="Tile" />
+            <elementDefinition Id="a3584f3a-04a2-43eb-926d-1f36c0223a65" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="8e0bb2dd-fa9a-4c40-9557-e21d98d83f31" name="Plain" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="6715b811-a7f5-4f4e-a4bf-2c551b516536" />
+        <generalsInternal>
+          <generalization Id="9b56a67d-b80d-4c6a-9225-f154c92d0001" isSubstitutable="false">
+            <classMoniker Id="7d318b63-a00e-4a5d-882d-a12974b3ed1f" LastKnownName="Tile" />
+            <elementDefinition Id="a3a07b1c-d458-43b9-b888-8f2ab581aba7" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="f9fb618c-a898-44a8-9515-90605a8195c7" name="Désert" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e7f69341-33b6-440e-ab5f-a1e3a9679e0b" />
+        <generalsInternal>
+          <generalization Id="8fd2b9fa-7487-4932-8db9-e3d4a27d765e" isSubstitutable="false">
+            <classMoniker Id="7d318b63-a00e-4a5d-882d-a12974b3ed1f" LastKnownName="Tile" />
+            <elementDefinition Id="c2c00c81-5955-4b6c-877d-298fd6c35a3c" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="053cc0ba-ca94-43d2-a544-f15ed5adde55" name="Forest" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0b4b692f-299f-4904-b110-72382eec6a35" />
+        <generalsInternal>
+          <generalization Id="21de75f0-91a6-42be-a3af-80b3cb6bf007" isSubstitutable="false">
+            <classMoniker Id="7d318b63-a00e-4a5d-882d-a12974b3ed1f" LastKnownName="Tile" />
+            <elementDefinition Id="c5f99412-c533-4dbe-b522-d0c7ff79a0c6" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="da8572b4-f61e-4dcf-aac0-b4870a1d21df" name="ITile" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e4ef558a-3740-4b27-bb5d-7dcffe5bbef5" />
+        <targetEnds>
+          <association Id="275e0ae4-c4b0-4e70-82c1-c0817567fa80" isDerived="false" sourceEndRoleName="ITile" targetEndRoleName="IUnit" isLeaf="false" isAbstract="false">
+            <interfaceMoniker Id="a6953acd-2849-4d66-829b-96bff7860343" LastKnownName="IUnit" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d5651ad3-e9bb-4c54-b010-7f7e6e31ba6e" name="ITile" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="37bd2219-b03a-4d70-a32a-bfdb2cf7bdca" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="426d820d-70c1-4d0c-863d-ed7b5f4330a7" name="IUnit" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="744c4d78-168e-4623-af73-746c7c8a0b7f" name="Lower" value="*">
+                      <elementDefinition Id="fdd90550-c93d-4989-b299-781ab35ee120" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="8a5b7d91-9a8f-4633-819d-e77b034c9581" name="Upper" value="*">
+                      <elementDefinition Id="c6cdb847-679e-44f2-8196-fc3c6fe17f55" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="5cdd0252-f268-4beb-95e6-12d3b9105ed8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="577b0753-baca-4254-a44d-96dff05a5556" />
+          </association>
+        </targetEnds>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="3d4698bc-84f0-46b9-9723-34541d599c7f" name="IPlayer" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="45bc5196-214b-406a-ae20-051fb6142def" />
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="73344d45-e7a7-491f-b928-ff0fef64c36b" name="IGame" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="835d0971-837c-4a2d-a59a-713fc2f7d927" />
+        <targetEnds>
+          <association Id="97a4da33-61f6-454f-b374-df73de423c7a" isDerived="false" sourceEndRoleName="IGame" targetEndRoleName="IPlayer" isLeaf="false" isAbstract="false">
+            <interfaceMoniker Id="3d4698bc-84f0-46b9-9723-34541d599c7f" LastKnownName="IPlayer" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3e94447c-e60e-4f68-b6a6-1d210f74f76b" name="IGame" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="bbcc94e5-e08b-4b31-bc02-4503012ce0cc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b8a99ff6-9e31-4f0c-bd07-4f853179b781" name="IPlayer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="7a4fdbd9-c8e2-4cb6-809f-f50443024f29" name="Lower" value="1">
+                      <elementDefinition Id="019fb0d3-03a2-4267-8316-05059d362bbd" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="eed316cd-ab58-4668-bbf0-1fdffdfeefb4" name="Upper" value="n">
+                      <elementDefinition Id="36703377-fe14-41b2-8cd9-6efdc7a19dcc" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="93a526de-1b6c-4ffe-8909-6bed7823eaa0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="432a9ac9-25ba-4cb2-93d4-e2b9887e5c34" />
+          </association>
+          <association Id="568b9965-f682-49ea-935c-73fa6e79274e" isDerived="false" sourceEndRoleName="IGame" targetEndRoleName="IBoard" isLeaf="false" isAbstract="false">
+            <interfaceMoniker Id="37bed275-57c3-4bc1-96eb-b95bbc8cdad0" LastKnownName="IBoard" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a26ba2e8-db65-4fbf-9bae-a530acf1771e" name="IGame" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4e776347-6666-4548-b2f7-8391fe0fae82" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a03f545b-6794-488a-9204-4af37d795711" name="IBoard" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="97b05fa3-33a5-4d02-93af-1122c745b83b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="fe5e1322-def9-4876-bc74-0fff52da5c07" />
+          </association>
+        </targetEnds>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="5479e33f-6c29-47e1-a4cf-626d0c9b2f1d" name="projetpoo">
+    <elementDefinition Id="dce22ead-5caa-46b0-b130-187ab8a7e180" />
+    <profileInstances>
+      <packageHasProfileInstances Id="76d2b45f-6c68-4612-bbd3-917cb550c51c">
+        <profileInstance Id="0001f59c-b811-4c55-a5e0-d55c6e62e46e" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="07ae9aa2-a492-40e9-9dc7-ddc4376d89a6">
+        <profileInstance Id="dde58bb2-cc56-4fcc-aba9-bc7cbf9d94bf" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

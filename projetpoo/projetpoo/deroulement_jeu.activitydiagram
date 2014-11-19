@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="ba5cd102-60c6-4231-8d80-816e455e13f6" name="Activity1" linkedPackageId="01a6d707-f8a8-4118-988e-b40b10c5e013" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="697de2d5-526e-4b73-8678-4fde2b2f9ae7">
+      <profileInstance Id="df8a9bd8-aff1-4b5c-95f6-6da2c60492b2" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="e4c41557-387d-4106-9295-1ee500f936e4">
+      <profileInstance Id="ae332359-8b13-4637-8216-aefe996ed344" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="25f2f258-153b-42b8-8183-1ff1bc2b22cc" name="Activity1" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="f6f86def-9270-4fb9-9147-3e42f97b911e" />
+        <nodes>
+          <initialNode Id="1d95d408-baaf-4043-a3c0-72a0fbfc2e53" name="Initial1" isLeaf="false">
+            <elementDefinition Id="fddfbcf0-d32c-4c9c-b5fe-7778b64879f8" />
+            <flowNodeTargets>
+              <controlFlow Id="15d84bd5-6f13-467c-8008-13d4dff30907" isLeaf="false">
+                <opaqueActionMoniker Id="550f1854-2a5d-475b-a473-355e88eebd5f" LastKnownName="Initialisation jeu" />
+                <elementDefinition Id="d691ea1f-bd6d-4d88-a9ec-2c2494ee2322" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <activityFinalNode Id="640dcc13-e248-442b-be8f-c7408d078415" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="b31fc208-3a2b-4e8d-bd7d-24c10fd8c369" />
+          </activityFinalNode>
+          <decisionNode Id="cfa48ae1-89d8-4758-89cc-3e17178acb8d" name="Decision1" isLeaf="false">
+            <elementDefinition Id="9065a736-e688-489f-8d69-79dd3237ec79" />
+            <flowNodeTargets>
+              <controlFlow Id="67b8f496-81e2-40ab-9134-08c61896947c" guard="Aucune défaite" isLeaf="false">
+                <opaqueActionMoniker Id="a654aa82-a80c-45a0-9323-4869eb697fa6" LastKnownName="Tour joueur 1" />
+                <elementDefinition Id="2ceb2839-59f9-4571-905e-b9b5913ae961" />
+              </controlFlow>
+              <controlFlow Id="31f673e9-08e4-42b5-a493-96525ea464fa" guard="Une défaite" isLeaf="false">
+                <opaqueActionMoniker Id="4b3c144e-33c3-4dc3-93ba-ee3f779f1912" LastKnownName="Fin de partie" />
+                <elementDefinition Id="d2c5ac1c-ecd0-4791-9768-ace0e9be2427" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="124e1c93-aa46-4ee5-a001-cb28e0007560" name="Création partie" isLeaf="false">
+            <elementDefinition Id="f15a2c6d-5eb1-40b5-bb12-be7ecb770bdc" />
+            <flowNodeTargets>
+              <controlFlow Id="0b68bc00-4b11-454b-8293-b90ff0098018" isLeaf="false">
+                <opaqueActionMoniker Id="7e9f330f-877b-4294-adea-e6d0ecc1f220" LastKnownName="Jeu" />
+                <elementDefinition Id="4527cc97-f031-46ac-b1f4-ed38b915e546" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="550f1854-2a5d-475b-a473-355e88eebd5f" name="Initialisation jeu" isLeaf="false">
+            <elementDefinition Id="363d7bcb-9408-4da2-9914-3bd0da6d7f5f" />
+            <flowNodeTargets>
+              <controlFlow Id="72f0ae8c-92b2-4783-93df-b2a81e55c0c2" guard="Start" isLeaf="false">
+                <opaqueActionMoniker Id="124e1c93-aa46-4ee5-a001-cb28e0007560" LastKnownName="Création partie" />
+                <elementDefinition Id="ad0b475b-b452-443d-89fe-759bfa69af53" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="7e9f330f-877b-4294-adea-e6d0ecc1f220" name="Jeu" isLeaf="false">
+            <elementDefinition Id="02247087-d999-40fa-8634-03f3779d52a0" />
+            <flowNodeTargets>
+              <controlFlow Id="565f8e40-e872-407e-9d25-a1d2559373b5" isLeaf="false">
+                <decisionNodeMoniker Id="cfa48ae1-89d8-4758-89cc-3e17178acb8d" LastKnownName="Decision1" />
+                <elementDefinition Id="220db75f-2660-41bc-925f-332499d3badf" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="a654aa82-a80c-45a0-9323-4869eb697fa6" name="Tour joueur 1" isLeaf="false">
+            <elementDefinition Id="e3a2a5ec-6436-48ca-ad31-20109ade4d9c" />
+            <flowNodeTargets>
+              <controlFlow Id="0085930a-872f-4bc0-8795-e47b198b505d" isLeaf="false">
+                <decisionNodeMoniker Id="322b267a-6f2e-4e9c-98da-491082469c96" LastKnownName="Decision2" />
+                <elementDefinition Id="2596bcd5-f9e5-4167-b223-741b49f6ae06" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="b923a23b-77c4-48dd-8b79-99bf5905fed5" name="Tour joueur 2" isLeaf="false">
+            <elementDefinition Id="5bacaf99-1e88-4b31-835a-fd60e357a9ec" />
+            <flowNodeTargets>
+              <controlFlow Id="25f2f18b-db27-4afc-9360-9716fbed5f1a" isLeaf="false">
+                <opaqueActionMoniker Id="7e9f330f-877b-4294-adea-e6d0ecc1f220" LastKnownName="Jeu" />
+                <elementDefinition Id="e5fea3a3-8531-4ce9-ad4d-2c96757a5a3e" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="322b267a-6f2e-4e9c-98da-491082469c96" name="Decision2" isLeaf="false">
+            <elementDefinition Id="d1bcf48f-0ff0-46c0-80c0-f3ff2fbcc254" />
+            <flowNodeTargets>
+              <controlFlow Id="814ac96a-8fd3-47b0-ac79-d9e905c3ab68" guard="Aucune défaite" isLeaf="false">
+                <opaqueActionMoniker Id="b923a23b-77c4-48dd-8b79-99bf5905fed5" LastKnownName="Tour joueur 2" />
+                <elementDefinition Id="06f7ef4f-5d1c-46c1-a754-8ea81b25f9f2" />
+              </controlFlow>
+              <controlFlow Id="fda2b7fa-15be-4de6-815e-b9f104677b2b" guard="Une défaite" isLeaf="false">
+                <opaqueActionMoniker Id="4b3c144e-33c3-4dc3-93ba-ee3f779f1912" LastKnownName="Fin de partie" />
+                <elementDefinition Id="1bc62d3f-49d0-4828-966c-ad9e18f38841" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="4b3c144e-33c3-4dc3-93ba-ee3f779f1912" name="Fin de partie" isLeaf="false">
+            <elementDefinition Id="c9fabc47-7876-479e-81e7-a600b0445214" />
+            <flowNodeTargets>
+              <controlFlow Id="573ace09-aa25-4ff5-88cd-b67a84903da0" isLeaf="false">
+                <activityFinalNodeMoniker Id="640dcc13-e248-442b-be8f-c7408d078415" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="22a619ee-7061-4bd0-825b-adfeb57ebb3e" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="01a6d707-f8a8-4118-988e-b40b10c5e013" name="projetpoo">
+    <elementDefinition Id="dce22ead-5caa-46b0-b130-187ab8a7e180" />
+  </package>
+</activityRootModel>

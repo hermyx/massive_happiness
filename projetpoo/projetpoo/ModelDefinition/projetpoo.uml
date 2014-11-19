@@ -1,0 +1,1817 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel"
+  dslVersion="1.0.0.0"
+  Id="dce22ead-5caa-46b0-b130-187ab8a7e180"
+  name="projetpoo" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <activity
+        Id="f6f86def-9270-4fb9-9147-3e42f97b911e"
+        name="Activity1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="fddfbcf0-d32c-4c9c-b5fe-7778b64879f8"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="d691ea1f-bd6d-4d88-a9ec-2c2494ee2322"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="363d7bcb-9408-4da2-9914-3bd0da6d7f5f"
+                  LastKnownName="Initialisation jeu"
+                  LastKnownLocation="projetpoo.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <activityFinalNode
+            Id="b31fc208-3a2b-4e8d-bd7d-24c10fd8c369"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <decisionNode
+            Id="9065a736-e688-489f-8d69-79dd3237ec79"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="2ceb2839-59f9-4571-905e-b9b5913ae961"
+                guard="Aucune défaite"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="e3a2a5ec-6436-48ca-ad31-20109ade4d9c"
+                  LastKnownName="Tour joueur 1"
+                  LastKnownLocation="projetpoo.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="d2c5ac1c-ecd0-4791-9768-ace0e9be2427"
+                guard="Une défaite"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="c9fabc47-7876-479e-81e7-a600b0445214"
+                  LastKnownName="Fin de partie"
+                  LastKnownLocation="projetpoo.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="f15a2c6d-5eb1-40b5-bb12-be7ecb770bdc"
+            name="Création partie"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="4527cc97-f031-46ac-b1f4-ed38b915e546"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="02247087-d999-40fa-8634-03f3779d52a0"
+                  LastKnownName="Jeu"
+                  LastKnownLocation="projetpoo.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="363d7bcb-9408-4da2-9914-3bd0da6d7f5f"
+            name="Initialisation jeu"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="ad0b475b-b452-443d-89fe-759bfa69af53"
+                guard="Start"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="f15a2c6d-5eb1-40b5-bb12-be7ecb770bdc"
+                  LastKnownName="Création partie"
+                  LastKnownLocation="projetpoo.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="02247087-d999-40fa-8634-03f3779d52a0"
+            name="Jeu"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="220db75f-2660-41bc-925f-332499d3badf"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="9065a736-e688-489f-8d69-79dd3237ec79"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="projetpoo.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="e3a2a5ec-6436-48ca-ad31-20109ade4d9c"
+            name="Tour joueur 1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="2596bcd5-f9e5-4167-b223-741b49f6ae06"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="d1bcf48f-0ff0-46c0-80c0-f3ff2fbcc254"
+                  LastKnownName="Decision2"
+                  LastKnownLocation="projetpoo.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="5bacaf99-1e88-4b31-835a-fd60e357a9ec"
+            name="Tour joueur 2"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="e5fea3a3-8531-4ce9-ad4d-2c96757a5a3e"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="02247087-d999-40fa-8634-03f3779d52a0"
+                  LastKnownName="Jeu"
+                  LastKnownLocation="projetpoo.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="d1bcf48f-0ff0-46c0-80c0-f3ff2fbcc254"
+            name="Decision2"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="06f7ef4f-5d1c-46c1-a754-8ea81b25f9f2"
+                guard="Aucune défaite"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="5bacaf99-1e88-4b31-835a-fd60e357a9ec"
+                  LastKnownName="Tour joueur 2"
+                  LastKnownLocation="projetpoo.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="1bc62d3f-49d0-4828-966c-ad9e18f38841"
+                guard="Une défaite"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="c9fabc47-7876-479e-81e7-a600b0445214"
+                  LastKnownName="Fin de partie"
+                  LastKnownLocation="projetpoo.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="c9fabc47-7876-479e-81e7-a600b0445214"
+            name="Fin de partie"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="22a619ee-7061-4bd0-825b-adfeb57ebb3e"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="b31fc208-3a2b-4e8d-bd7d-24c10fd8c369"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="projetpoo.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="e5218b46-d6a5-4488-9bff-97db805fd636"
+        name="deroulement_tour"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="01621849-cddf-4523-9af4-8b3208cc540b"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="01d23cce-5d0f-41c1-bc57-0cd67fd47e52"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="ff09a792-6ce4-479a-ac4a-fa0d0f40e723"
+                  LastKnownName="Debut tour"
+                  LastKnownLocation="projetpoo.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="ff09a792-6ce4-479a-ac4a-fa0d0f40e723"
+            name="Debut tour"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="69542c2b-6347-47b7-bf2a-f7ffffadecce"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="14239e1e-4fc6-4677-b5f9-b4421e047a47"
+                  LastKnownName="Choix action"
+                  LastKnownLocation="projetpoo.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="14239e1e-4fc6-4677-b5f9-b4421e047a47"
+            name="Choix action"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="81fac7f5-fdbc-44e4-8a34-ef2f5a37b5d1"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="6553ffca-04e2-4f7e-9fe2-38306e2ee9e7"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="projetpoo.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="6553ffca-04e2-4f7e-9fe2-38306e2ee9e7"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="816b1a0a-9158-4fcc-8be5-dc957df378d0"
+                guard="Terminer tour"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="433da6f6-5788-4d2d-9219-aa0ebc0bffdf"
+                  LastKnownName="Fin du tour"
+                  LastKnownLocation="projetpoo.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="add961f7-3b71-40dc-a0a2-8bf261c175b2"
+                guard="Selectionner case"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="6b945950-621a-430a-a007-f02d8c5108ae"
+                  LastKnownName="Selection case"
+                  LastKnownLocation="projetpoo.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="433da6f6-5788-4d2d-9219-aa0ebc0bffdf"
+            name="Fin du tour"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="d2b2e7de-d711-4f66-8f86-a5c999bd792d"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="39d4756e-a165-4df5-986f-2533a6c40c14"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="projetpoo.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode
+            Id="39d4756e-a165-4df5-986f-2533a6c40c14"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <opaqueAction
+            Id="6b945950-621a-430a-a007-f02d8c5108ae"
+            name="Selection case"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="04f8f0b7-d81b-4b05-bf45-cd0969526e1c"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="d93ffb3e-06a0-4a15-8c6c-aff35fe49f8a"
+                  LastKnownName="Decision2"
+                  LastKnownLocation="projetpoo.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="d93ffb3e-06a0-4a15-8c6c-aff35fe49f8a"
+            name="Decision2"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="62d29989-ada9-4ce7-8fb0-102ee5439df6"
+                guard="Case vide"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="14239e1e-4fc6-4677-b5f9-b4421e047a47"
+                  LastKnownName="Choix action"
+                  LastKnownLocation="projetpoo.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="4806f74e-c2ac-48f4-8ddd-ca5ce2488ece"
+                guard="Plusieurs unités dans la case"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="15e80e89-3555-46b0-b653-1f98b52d196c"
+                  LastKnownName="Affichage popup"
+                  LastKnownLocation="projetpoo.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="8e550ed1-4e8f-4deb-b8f2-c65c0cd9e523"
+                guard="Une seule unité dans la case"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="39ab0dd5-f13b-4362-9ca1-8e0e75258bb2"
+                  LastKnownName="Sélection unité"
+                  LastKnownLocation="projetpoo.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="15e80e89-3555-46b0-b653-1f98b52d196c"
+            name="Affichage popup"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="98620115-aa19-472e-bf8d-7017a4587372"
+                guard="Sélectionner unité"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="39ab0dd5-f13b-4362-9ca1-8e0e75258bb2"
+                  LastKnownName="Sélection unité"
+                  LastKnownLocation="projetpoo.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="39ab0dd5-f13b-4362-9ca1-8e0e75258bb2"
+            name="Sélection unité"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="e5b0a0f6-5e94-4585-acc1-3a6c1b89e68b"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="e55bef01-d6ae-4e61-a43d-b7b7a74bdab7"
+                  LastKnownName="Choix action unité"
+                  LastKnownLocation="projetpoo.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="e55bef01-d6ae-4e61-a43d-b7b7a74bdab7"
+            name="Choix action unité"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="e69343d4-f33c-460c-b9c7-3a34b28b0a06"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="d8f8350e-ee63-49aa-829e-c2e28a065c64"
+                  LastKnownName="Decision3"
+                  LastKnownLocation="projetpoo.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="d8f8350e-ee63-49aa-829e-c2e28a065c64"
+            name="Decision3"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="04ff8c87-359a-47c8-ade8-f09fcf0df554"
+                guard="Annuler"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="14239e1e-4fc6-4677-b5f9-b4421e047a47"
+                  LastKnownName="Choix action"
+                  LastKnownLocation="projetpoo.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="05575b97-681f-4c4f-b4b6-cb48c3d3ab03"
+                guard="Attaquer"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="10e146f4-3adf-487c-83de-c54418007eda"
+                  LastKnownName="Validation attaque"
+                  LastKnownLocation="projetpoo.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="a43cefa3-c868-4794-a37e-1357676784ba"
+                guard="Déplacer"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="36f678f3-099b-454b-9fa9-b91122d235b9"
+                  LastKnownName="Validation déplacement"
+                  LastKnownLocation="projetpoo.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="10e146f4-3adf-487c-83de-c54418007eda"
+            name="Validation attaque"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="c18e96b2-52b6-4671-95e4-24127dedef33"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="0b5868f6-487f-4d2d-a562-a096a779b8d3"
+                  LastKnownName="Decision4"
+                  LastKnownLocation="projetpoo.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="36f678f3-099b-454b-9fa9-b91122d235b9"
+            name="Validation déplacement"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="70297960-f72b-44fb-baf2-8d1f39a90987"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="ea5f071c-15f2-4eb9-95d6-e8ad5ded70e6"
+                  LastKnownName="Decision5"
+                  LastKnownLocation="projetpoo.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="0b5868f6-487f-4d2d-a562-a096a779b8d3"
+            name="Decision4"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="59fba86f-7d24-4179-8e73-8b165b47e5b2"
+                guard="Non valide"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="e55bef01-d6ae-4e61-a43d-b7b7a74bdab7"
+                  LastKnownName="Choix action unité"
+                  LastKnownLocation="projetpoo.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="9380c84e-8ea5-4b5e-8503-7fefee0c18c9"
+                guard="Valide"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="83408dfb-0c7a-4035-8379-ad9178523829"
+                  LastKnownName="Combat"
+                  LastKnownLocation="projetpoo.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <decisionNode
+            Id="ea5f071c-15f2-4eb9-95d6-e8ad5ded70e6"
+            name="Decision5"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="d03cc975-9594-48d4-b072-bc4977bff221"
+                guard="Valide"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="902b24ac-6f07-4821-8048-321b8141f8b2"
+                  LastKnownName="Déplacement"
+                  LastKnownLocation="projetpoo.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="d3a3169d-8e74-4f94-97e5-05a9e0c0ab5b"
+                guard="Non valide"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="e55bef01-d6ae-4e61-a43d-b7b7a74bdab7"
+                  LastKnownName="Choix action unité"
+                  LastKnownLocation="projetpoo.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="83408dfb-0c7a-4035-8379-ad9178523829"
+            name="Combat"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="539c4f37-2e1c-424e-af88-a2da9e2d8a24"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="14239e1e-4fc6-4677-b5f9-b4421e047a47"
+                  LastKnownName="Choix action"
+                  LastKnownLocation="projetpoo.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="902b24ac-6f07-4821-8048-321b8141f8b2"
+            name="Déplacement"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="ba01503a-12c8-4fea-aaaf-3c42e4d42457"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="14239e1e-4fc6-4677-b5f9-b4421e047a47"
+                  LastKnownName="Choix action"
+                  LastKnownLocation="projetpoo.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="27996b53-b51c-4ba1-b8a4-7ba2d086db9a"
+        name="Unit"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="998a3b9d-460e-4649-b581-776153103878"
+        name="Elf"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="2e8029d8-9f9c-4656-9591-ed4441de476e"
+            isSubstitutable="false">
+            <classMoniker
+              Id="27996b53-b51c-4ba1-b8a4-7ba2d086db9a"
+              LastKnownName="Unit"
+              LastKnownLocation="projetpoo.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="93ca2bda-0515-4f55-948d-93ae53dcdd1e"
+        name="Dwarf"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="3b937878-ca03-4faf-8e80-a08d1ae36b83"
+            isSubstitutable="false">
+            <classMoniker
+              Id="27996b53-b51c-4ba1-b8a4-7ba2d086db9a"
+              LastKnownName="Unit"
+              LastKnownLocation="projetpoo.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="6fbedeb1-fd1a-4ab5-a193-74ea148c81e0"
+        name="Interface1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="4086ed0c-6590-40e1-a1c3-9ec05af3ae2f"
+        name="Orc"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="a4d57842-cf5f-4052-932c-7292e93ea57c"
+            isSubstitutable="false">
+            <classMoniker
+              Id="27996b53-b51c-4ba1-b8a4-7ba2d086db9a"
+              LastKnownName="Unit"
+              LastKnownLocation="projetpoo.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="869dca27-fbfe-4c5b-8594-898ea5dc9626"
+        name="UnitFactory"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="7c1a26df-9c2b-4f74-ba41-41a4ae04d6dd">
+            <classMoniker
+              Id="27996b53-b51c-4ba1-b8a4-7ba2d086db9a"
+              LastKnownName="Unit"
+              LastKnownLocation="projetpoo.uml" />
+          </dependency>
+        </suppliersInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="4129b4ec-351b-4d74-9957-b95062985588"
+        name="Tile"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="2ee62899-6b9e-4055-be16-c11bd625f3ee"
+            isDerived="false"
+            sourceEndRoleName="Tile"
+            targetEndRoleName="Unit"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="27996b53-b51c-4ba1-b8a4-7ba2d086db9a"
+              LastKnownName="Unit"
+              LastKnownLocation="projetpoo.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c66bad59-2e08-4782-b3b2-4d5b513e2182"
+                  name="Tile"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8399337b-97a7-48e2-8420-bed693d55380"
+                  name="Unit"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="afa8615a-86b9-46f2-a090-5381dfe83381"
+                      name="Lower"
+                      value="0" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="c97e6c1b-bd81-4d33-8d3a-ba82e191d430"
+                      name="Upper"
+                      value="n" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="cd913b04-cd80-4cd9-8008-ab2815670c18"
+            isDerived="false"
+            sourceEndRoleName="Tile"
+            targetEndRoleName="Board"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="fa1c508c-71b8-4a67-86c0-ef8f3099ae0d"
+              LastKnownName="Board"
+              LastKnownLocation="projetpoo.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2882420e-608e-4d3b-a205-492c0f6cd1ef"
+                  name="Tile"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="575d5cf6-a247-4a66-a72d-67604dc217ee"
+                  name="Board"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="4231f2d2-e1b5-4c98-87f6-372051f7ce48"
+        name="TileFactory"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="af8d6624-bcee-4c8b-bc91-e771fe3514bc"
+            isDerived="false"
+            sourceEndRoleName="TileFactory"
+            targetEndRoleName="Tile"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="4129b4ec-351b-4d74-9957-b95062985588"
+              LastKnownName="Tile"
+              LastKnownLocation="projetpoo.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1726a5a8-fbe4-40fe-9c97-aa1f01c4c58b"
+                  name="TileFactory"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d35d3a14-8986-4d8a-8843-38d9018698d4"
+                  name="Tile"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="fe83cc46-1534-42c6-a386-46abe50e8e4d"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="ca394667-147a-428c-92e8-3602e3e96a93"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="bbdc76bb-6d63-434b-9d2d-f646ca70f887"
+            isDerived="false"
+            sourceEndRoleName="TileFactory"
+            targetEndRoleName="Board"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="fa1c508c-71b8-4a67-86c0-ef8f3099ae0d"
+              LastKnownName="Board"
+              LastKnownLocation="projetpoo.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7eb9f397-b032-4695-b632-932c1e9b13da"
+                  name="TileFactory"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6902e3a8-9eda-474f-8153-64a0db70d85b"
+                  name="Board"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="fa1c508c-71b8-4a67-86c0-ef8f3099ae0d"
+        name="Board"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="8f7af57a-62fb-4ca9-bc83-7c7fe0ea0413"
+        name="IBoard"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="b7bd3b2c-e676-401c-842b-92cd7b5367ea"
+            isDerived="false"
+            sourceEndRoleName="IBoard"
+            targetEndRoleName="ITile"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="e4ef558a-3740-4b27-bb5d-7dcffe5bbef5"
+              LastKnownName="ITile"
+              LastKnownLocation="projetpoo.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2b4e2105-6de5-45a1-bf66-7dd49d73fb64"
+                  name="IBoard"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f540a1c2-de27-40e9-ba2c-83391c55d4b1"
+                  name="ITile"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="7ebe8e4a-60c1-4d16-969c-42ef72ea7d9e"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="9ea3e90c-ec57-4afe-8d09-fb10bfe1cccb"
+                      name="Upper"
+                      value="n" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="6217b4cb-b843-4396-be8b-aceb2375bdb6"
+        name="Demo"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="441ae498-88cf-4df8-8a67-d5f7be3fab5f"
+            isSubstitutable="false">
+            <classMoniker
+              Id="fa1c508c-71b8-4a67-86c0-ef8f3099ae0d"
+              LastKnownName="Board"
+              LastKnownLocation="projetpoo.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a37ede74-abf6-4118-bded-b11c36f6b678"
+        name="Small"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="26d4252e-e1de-440f-ad11-03b23162308a"
+            isSubstitutable="false">
+            <classMoniker
+              Id="fa1c508c-71b8-4a67-86c0-ef8f3099ae0d"
+              LastKnownName="Board"
+              LastKnownLocation="projetpoo.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="172ae94d-2d20-44f3-8d33-65c24edcfc75"
+        name="Normal"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="48f84a4b-f0c4-4691-9f36-bae0a44455c2"
+            isSubstitutable="false">
+            <classMoniker
+              Id="fa1c508c-71b8-4a67-86c0-ef8f3099ae0d"
+              LastKnownName="Board"
+              LastKnownLocation="projetpoo.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="90ae07cd-a803-4d1c-b1f7-923725e8f789"
+        name="IUnit"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="262d05eb-c5f6-480c-823b-f43adf88a083"
+        name="Mountain"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="a3584f3a-04a2-43eb-926d-1f36c0223a65"
+            isSubstitutable="false">
+            <classMoniker
+              Id="4129b4ec-351b-4d74-9957-b95062985588"
+              LastKnownName="Tile"
+              LastKnownLocation="projetpoo.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="6715b811-a7f5-4f4e-a4bf-2c551b516536"
+        name="Plain"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="a3a07b1c-d458-43b9-b888-8f2ab581aba7"
+            isSubstitutable="false">
+            <classMoniker
+              Id="4129b4ec-351b-4d74-9957-b95062985588"
+              LastKnownName="Tile"
+              LastKnownLocation="projetpoo.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="e7f69341-33b6-440e-ab5f-a1e3a9679e0b"
+        name="Désert"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="c2c00c81-5955-4b6c-877d-298fd6c35a3c"
+            isSubstitutable="false">
+            <classMoniker
+              Id="4129b4ec-351b-4d74-9957-b95062985588"
+              LastKnownName="Tile"
+              LastKnownLocation="projetpoo.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="0b4b692f-299f-4904-b110-72382eec6a35"
+        name="Forest"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="c5f99412-c533-4dbe-b522-d0c7ff79a0c6"
+            isSubstitutable="false">
+            <classMoniker
+              Id="4129b4ec-351b-4d74-9957-b95062985588"
+              LastKnownName="Tile"
+              LastKnownLocation="projetpoo.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <interaction
+        Id="64f4dbc0-f8d6-4707-8e18-171e318214fe"
+        name="Sequence1"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <lifelines>
+          <lifeline
+            Id="1227419e-4118-46a8-b9ac-a6b42b6c8701"
+            name="Lifeline1"
+            isActor="false"
+            lifelineDisplayName="Lifeline1" />
+        </lifelines>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="e4ef558a-3740-4b27-bb5d-7dcffe5bbef5"
+        name="ITile"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="577b0753-baca-4254-a44d-96dff05a5556"
+            isDerived="false"
+            sourceEndRoleName="ITile"
+            targetEndRoleName="IUnit"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="90ae07cd-a803-4d1c-b1f7-923725e8f789"
+              LastKnownName="IUnit"
+              LastKnownLocation="projetpoo.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="37bd2219-b03a-4d70-a32a-bfdb2cf7bdca"
+                  name="ITile"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5cdd0252-f268-4beb-95e6-12d3b9105ed8"
+                  name="IUnit"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="fdd90550-c93d-4989-b299-781ab35ee120"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="c6cdb847-679e-44f2-8196-fc3c6fe17f55"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="115c4fdc-c968-474b-939f-f0790db1ba6b"
+        name="Class1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="45bc5196-214b-406a-ae20-051fb6142def"
+        name="IPlayer"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="835d0971-837c-4a2d-a59a-713fc2f7d927"
+        name="IGame"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="432a9ac9-25ba-4cb2-93d4-e2b9887e5c34"
+            isDerived="false"
+            sourceEndRoleName="IGame"
+            targetEndRoleName="IPlayer"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="45bc5196-214b-406a-ae20-051fb6142def"
+              LastKnownName="IPlayer"
+              LastKnownLocation="projetpoo.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bbcc94e5-e08b-4b31-bc02-4503012ce0cc"
+                  name="IGame"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="93a526de-1b6c-4ffe-8909-6bed7823eaa0"
+                  name="IPlayer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="019fb0d3-03a2-4267-8316-05059d362bbd"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="36703377-fe14-41b2-8cd9-6efdc7a19dcc"
+                      name="Upper"
+                      value="n" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="fe5e1322-def9-4876-bc74-0fff52da5c07"
+            isDerived="false"
+            sourceEndRoleName="IGame"
+            targetEndRoleName="IBoard"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="8f7af57a-62fb-4ca9-bc83-7c7fe0ea0413"
+              LastKnownName="IBoard"
+              LastKnownLocation="projetpoo.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4e776347-6666-4548-b2f7-8391fe0fae82"
+                  name="IGame"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="97b05fa3-33a5-4d02-93af-1122c745b83b"
+                  name="IBoard"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="f70ef74e-16e0-4612-ac34-2aa8d1822bf3"
+        name="Joueur"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="0430b13e-fd96-4785-89d1-17c9ce6690bd"
+            isDerived="false"
+            sourceEndRoleName="Joueur"
+            targetEndRoleName="Configurer partie"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="20f53b61-0aa2-47cf-a8af-b2f55c18de36"
+              LastKnownName="Configurer partie"
+              LastKnownLocation="projetpoo.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2e066cc1-8410-4832-8a06-48cadfd392ac"
+                  name="Joueur"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="83e96b0c-bab3-46df-9dad-f13f5ed44a2c"
+                  name="Configurer partie"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="62ebafe4-58fe-45da-bcdc-cad406b850f4"
+            isDerived="false"
+            sourceEndRoleName="Joueur"
+            targetEndRoleName="Démarrer partie"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="5274d356-2ff6-4a2a-9093-3bf1557a8e74"
+              LastKnownName="Démarrer partie"
+              LastKnownLocation="projetpoo.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4832e825-51c9-4fe5-b54b-e4b6b4a42e8c"
+                  name="Joueur"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bb3aa149-4301-42ad-a4a1-7b16dba22964"
+                  name="Démarrer partie"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="56e81830-9fb0-40ce-9a70-8a19f98237d3"
+            isDerived="false"
+            sourceEndRoleName="Joueur"
+            targetEndRoleName="Charger partie"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="a447795e-5008-457e-a999-673a5b8dba57"
+              LastKnownName="Charger partie"
+              LastKnownLocation="projetpoo.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="572063d7-5b4d-445a-98cf-abd650b636fb"
+                  name="Joueur"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="098dfc8b-05f5-4e33-a4ca-fd2e181d7d99"
+                  name="Charger partie"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="20f53b61-0aa2-47cf-a8af-b2f55c18de36"
+        name="Configurer partie"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="ea582d81-ff48-49df-986f-90f9951f007d">
+            <useCaseMoniker
+              Id="a20901a9-4352-4744-a54f-d766362a533d"
+              LastKnownName="Choisir type de partie"
+              LastKnownLocation="projetpoo.uml" />
+          </include>
+          <include
+            Id="982aafab-b246-4d22-b0a0-ab1c74a2f694">
+            <useCaseMoniker
+              Id="c2ca1247-be33-4b6b-a299-f9da13c19a71"
+              LastKnownName="Choisir nb joueurs"
+              LastKnownLocation="projetpoo.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a20901a9-4352-4744-a54f-d766362a533d"
+        name="Choisir type de partie"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c2ca1247-be33-4b6b-a299-f9da13c19a71"
+        name="Choisir nb joueurs"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d355e90d-b462-4c83-8e1c-16d07a057c8d"
+        name="Sauvegarder partie"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a447795e-5008-457e-a999-673a5b8dba57"
+        name="Charger partie"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="5274d356-2ff6-4a2a-9093-3bf1557a8e74"
+        name="Démarrer partie"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="53132e96-b9ce-4027-ab88-a1316271d428"
+        name="Joueur"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="e78516ec-47be-4189-9f06-d9a2f3bb6478"
+            isDerived="false"
+            sourceEndRoleName="Joueur"
+            targetEndRoleName="Passer tour"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="3c876007-3a7d-4c79-bbd5-6263f835b66c"
+              LastKnownName="Passer tour"
+              LastKnownLocation="projetpoo.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="86b1b6fa-67c9-47c1-b268-72606bea78f5"
+                  name="Joueur"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5c3545bf-997e-4c67-8785-bf307f4fc43d"
+                  name="Passer tour"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="30d51741-3bc0-47d1-95f1-cfd036457b1a"
+            isDerived="false"
+            sourceEndRoleName="Joueur"
+            targetEndRoleName="Sélectionner unité"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="dd20de6a-eeb4-4cb3-8213-4b6e188a4273"
+              LastKnownName="Sélectionner unité"
+              LastKnownLocation="projetpoo.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0a5063fb-4fdc-4984-be8d-4bad9874c506"
+                  name="Joueur"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="409ffaed-7a82-4b3f-a21a-eeef9c3b6169"
+                  name="Sélectionner unité"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="20c858cd-92c6-4811-bab0-4798c69bf22f"
+            isDerived="false"
+            sourceEndRoleName="Joueur"
+            targetEndRoleName="Donner ordre"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="de6a7000-094c-48ef-8c0b-61d47351fd36"
+              LastKnownName="Donner ordre"
+              LastKnownLocation="projetpoo.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c45189e5-3a50-4b99-9937-7d2e897fca62"
+                  name="Joueur"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="51199286-3a02-4c1f-9a7d-d94d30e17802"
+                  name="Donner ordre"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="1bb0a521-1d95-41aa-897c-fa67d8192eb8"
+            isDerived="false"
+            sourceEndRoleName="Joueur"
+            targetEndRoleName="Gestion partie"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="8bc5efb8-a71f-4c39-8b0c-bba12ea9be26"
+              LastKnownName="Gestion partie"
+              LastKnownLocation="projetpoo.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9b8765dd-cef7-4b13-a966-cf4dbecc9f34"
+                  name="Joueur"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0c52972b-2531-4ad1-acd4-d469fd594bf0"
+                  name="Gestion partie"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="dd20de6a-eeb4-4cb3-8213-4b6e188a4273"
+        name="Sélectionner unité"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="0ad91601-d1d5-4030-9a02-e10ed1de3067">
+            <useCaseMoniker
+              Id="de6a7000-094c-48ef-8c0b-61d47351fd36"
+              LastKnownName="Donner ordre"
+              LastKnownLocation="projetpoo.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="b5384d11-6623-4c7f-8b92-79c4321b7cb1"
+        name="Subsystem1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d5b46ea1-f514-4bc8-8146-b1df5d4f114a"
+        name="UseCase1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="de6a7000-094c-48ef-8c0b-61d47351fd36"
+        name="Donner ordre"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="a5f13839-96f6-43e8-96a2-059120f7936f"
+            isDerived="false"
+            sourceEndRoleName="Donner Ordre"
+            targetEndRoleName="Déplacer"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="4e424183-0c95-4f7f-9d5a-f2e7cb91a5ad"
+              LastKnownName="Déplacer"
+              LastKnownLocation="projetpoo.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e25227d5-c02f-43b5-93c9-79d8f328be21"
+                  name="Donner Ordre"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d27165ce-d00c-4b6c-8bf2-469c1c46bf42"
+                  name="Déplacer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="ce2d21e3-b5d0-48a8-b14a-a7f712fc531e"
+            isDerived="false"
+            sourceEndRoleName="Donner Ordre"
+            targetEndRoleName="Attaquer"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="2b9b5e06-a268-41e8-9b6e-fc741f235224"
+              LastKnownName="Attaquer"
+              LastKnownLocation="projetpoo.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="026d7ec7-6747-40c8-affa-ac19a63956aa"
+                  name="Donner Ordre"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="54825caf-0130-43bd-9f0a-7c0819712e43"
+                  name="Attaquer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="4e424183-0c95-4f7f-9d5a-f2e7cb91a5ad"
+        name="Déplacer"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2b9b5e06-a268-41e8-9b6e-fc741f235224"
+        name="Attaquer"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="dc7ad5fd-b858-4333-8bf0-a6b089bbe1bc"
+        name="Supprimer"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3c876007-3a7d-4c79-bbd5-6263f835b66c"
+        name="Passer tour"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="16d874e1-f0f6-4a58-917d-2a0a0cb2f78c"
+        name="UseCase2"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="5e7c82d6-04e8-40a7-8911-61a12b97e731"
+        name="UseCase3"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="adffb244-a97a-457e-bd6e-a287a310396b"
+        name="Quitter partie"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="9e017bac-1a10-4cb1-bed7-fb343df8bba9"
+        name="Charger partie"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="8bc5efb8-a71f-4c39-8b0c-bba12ea9be26"
+        name="Gestion partie"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="54ca4c4e-9eae-45f8-8cfa-3e4f58950e05">
+            <useCaseMoniker
+              Id="adffb244-a97a-457e-bd6e-a287a310396b"
+              LastKnownName="Quitter partie"
+              LastKnownLocation="projetpoo.uml" />
+          </extend>
+          <extend
+            Id="7484384c-5a92-4d04-90c9-2d9a264b323c">
+            <useCaseMoniker
+              Id="d355e90d-b462-4c83-8e1c-16d07a057c8d"
+              LastKnownName="Sauvegarder partie"
+              LastKnownLocation="projetpoo.uml" />
+          </extend>
+          <extend
+            Id="24053e1e-d9ae-45ec-a5f9-b51c0b4430bc">
+            <useCaseMoniker
+              Id="9e017bac-1a10-4cb1-bed7-fb343df8bba9"
+              LastKnownName="Charger partie"
+              LastKnownLocation="projetpoo.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>
