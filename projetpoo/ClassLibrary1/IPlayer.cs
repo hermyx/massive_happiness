@@ -7,8 +7,8 @@ namespace ClassLibrary1
 {
     public interface IPlayer
     {
-        void getPoints();
+        int getPoints();
 
-        void getName();
+        string getName();
     }
 }

@@ -7,7 +7,7 @@ namespace ClassLibrary1
 {
     public class Dwarf : Unit
     {
-        public void move()
+        public void move(Tile t)
         {
             throw new System.NotImplementedException();
         }

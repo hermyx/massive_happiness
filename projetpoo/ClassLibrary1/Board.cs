@@ -43,7 +43,7 @@ namespace ClassLibrary1
             }
         }
 
-        public int _selectedTile
+        public Tile _selectedTile
         {
             get
             {

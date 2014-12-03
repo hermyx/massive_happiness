@@ -8,7 +8,7 @@ namespace ClassLibrary1
     public interface IBoard
     {
 
-        void moveUnit();
+        void moveUnit(Unit u, Tile t);
 
     }
 }

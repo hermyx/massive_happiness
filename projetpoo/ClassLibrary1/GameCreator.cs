@@ -18,7 +18,11 @@ namespace ClassLibrary1
             }
         }
 
+<<<<<<< HEAD
         public Game buildGame(int option)
+=======
+        public Game buildGame(int typeGame) // sig ok
+>>>>>>> signatures made
         {
             throw new System.NotImplementedException();
         }

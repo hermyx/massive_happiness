@@ -7,7 +7,7 @@ namespace ClassLibrary1
 {
     public abstract class AUnit : IUnit
     {
-        public void lifePoints()
+        public int lifePoints()
         {
             throw new NotImplementedException();
         }

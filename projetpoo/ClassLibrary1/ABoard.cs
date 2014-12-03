@@ -43,7 +43,7 @@ namespace ClassLibrary1
             }
         }
 
-        public void moveUnit()
+        public void moveUnit(Unit u, Tile t)
         {
             throw new NotImplementedException();
         }

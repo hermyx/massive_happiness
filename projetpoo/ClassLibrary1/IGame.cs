@@ -7,6 +7,6 @@ namespace ClassLibrary1
 {
     public interface IGame
     {
-        void nextPlayer();
+        IPlayer nextPlayer();
     }
 }

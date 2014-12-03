@@ -51,7 +51,7 @@ namespace ClassLibrary1
             }
         }
 
-        public void attack()
+        public void attack(Unit def)
         {
             throw new System.NotImplementedException();
         }

@@ -8,6 +8,6 @@ namespace ClassLibrary1
     public interface IUnit
     {
 
-        void lifePoints();
+        int lifePoints();
     }
 }

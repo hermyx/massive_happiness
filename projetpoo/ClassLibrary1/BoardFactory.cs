@@ -8,9 +8,11 @@ namespace ClassLibrary1
     public class BoardFactory : AGame
     {
 
-        public void buildBoard()
+        public void buildBoard(int type) // sig ok
         {
-            throw new System.NotImplementedException();
+                 throw new System.NotImplementedException();
         }
     }
+
+    enum BoardType { DEMO, SMALL, NORMAL } 
 }

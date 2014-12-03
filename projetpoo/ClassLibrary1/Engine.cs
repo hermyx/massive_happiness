@@ -7,12 +7,12 @@ namespace ClassLibrary1
 {
     public class Engine
     {
-        public void validMove()
+        public void validMove(Unit u, Tile zone) // sig ok
         {
             throw new System.NotImplementedException();
         }
 
-        public void runAttack()
+        public void runAttack(Unit off, Tile zone) // sig ok
         {
             throw new System.NotImplementedException();
         }
