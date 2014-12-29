@@ -1,0 +1,92 @@
+// Here, we define a level of height for each aera (for instance, Water is 0, mountain is 4)
+// And we link it (hashtable) with the number of occurences it has to make
+// In this case, the level will be Swamp -> Forest -> Plain -> Mountains
+// And in a 10*10, each aera will be put 25 times
+
+data = new HashTable {0 -> 25 ; 1 -> 25 ; 2 -> 25 ; 3 -> 25 }
+int maxData = 3;
+int x = 10;
+int y = 10;
+int[][] map = int[-1, ..., -1][-1, ..., -1];
+
+void firstFill(){
+	int tileX = rand(0,x);
+	int tileY = rand(0,y);
+	int tileFill = rand(0,maxData);
+	map[tileX][tileY]=tileFill;
+	testNeighbors(tileX, tileY, tileFill);	
+}
+
+void nextFill(int x, int y, int prevTile){
+	int tileFill = findNextLand(prevTile);
+	map[x][y]= tileFill;
+	testNeighbors(x, y, tileFill);
+}
+
+void testNeighbors(int tileX, int tileY, int tileFill){
+	if(map[tileX-1][tileY]==-1)
+		nextFill(tileX-1, tileY, tileFill);
+	if(map[tileX+1][tileY]==-1)
+		nextFill(tileX+1, tileY, tileFill);
+	if(map[tileX-1][tileY+1]==-1)
+		nextFill(tileX-1, tileY+1, tileFill);
+	if(map[tileX+1][tileY+1]==-1)
+		nextFill(tileX+1, tileY+1, tileFill);
+	if(map[tileX][tileY-1]==-1)
+		nextFill(tileX1, tileY-1, tileFill);
+	if(map[tileX][tileY+1]==-1)
+		nextFill(tileX, tileY+1, tileFill);	
+}
+
+int findNextLand(int prevTile){
+	int ret = 0;
+	if (data[prevTile] != 0){
+		int proba = rand(0,100)/100;
+		switch (proba){
+			case(proba < 0.4) : ret = 0 ; break;
+			case(proba < 0.6) : ret = -1 ; break;
+			case(proba < 0.8) : ret = 1 ; break;
+			case(proba < 0.9) : ret = -2 ; break;
+			case(proba < 1) : ret = 2 ; break;
+		}
+	} else {
+		int proba = rand(0,100)/100;
+		switch (proba){
+			case(proba < 0.4) : ret = -1 ; break;
+			case(proba < 0.8) : ret = 1 ; break;
+			case(proba < 0.9) : ret = -2 ; break;
+			case(proba < 1) : ret = 2 ; break;
+	}
+	int newtype = (prevTile+ret);
+	if(newtype>=0 && newtype<=maxData && data[newtype]!=0)
+		return newtype;
+	else if (newtype<0)
+		return (lessTile(newtype));
+	else if (newtype>maxData)
+		return (moreTile(newtype));
+	else if(data[newtype]==0 && newtype > prevTile)
+		return (moreTile(newtype));
+	else if(data[newtype]==0 && newtype < prevTile)
+		return (moreTile(newtype));
+}
+
+//No need to check if the hashtable is empty : it will be when all the case will be filled
+int moreTile(newtype){
+	int testTab = newtype + 1;
+	while (testTab <= maxData)
+		if (data[testTab]==0)
+			return testTab;
+		else
+			++testTab;
+	return lessTile(testTab-1); //Warning : to test
+}
+
+int moreTile(newtype){
+	int testTab = newtype -1;
+	while (testTab >= 0)
+		if (data[testTab]==0)
+			return testTab;
+		else
+			--testTab;
+	return lessTile(testTab+1); //Warning : to test
+}

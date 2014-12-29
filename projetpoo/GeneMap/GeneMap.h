@@ -1,6 +1,9 @@
 // GeneMap.h
 
 #pragma once
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 using namespace System;
 
@@ -15,6 +18,7 @@ namespace GeneMapG {
 
 	public:
 		GeneMap(int); //s for size
+		void randomFillTest();
 		void randomFill();
 	};
 }
